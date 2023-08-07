@@ -39,14 +39,27 @@ $(document).ready(() => {
         success: function (data){
             let html = "";
             $.each(data.data, (k,v) => {
+                // html += `
+                //     <tr>
+                //         <td>${v.name}</td>    
+                //         <td>${v.full_name}</td>     
+                //     </tr>
+                // `;
                 html += `
-                    <tr>
-                        <td>${v.name}</td>    
-                        <td>${v.full_name}</td>     
-                    </tr>
+                    <div class="col">
+                        <div class="card h-100 border-success">
+                            <div class="card-header">Name: <strong>${v.name}</strong></div>
+                            <div class="card-body text-success">
+                                <a href="${v.html_url}" class="text-success" target="_blank">${v.html_url}</a>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Created_at: <strong>${v.created_at}</strong></small>
+                            </div>
+                        </div>
+                    </div>
                 `;
             });
-            $("#tbody").append(html);
+            $("#body_card").append(html);
         }
     });
 });
