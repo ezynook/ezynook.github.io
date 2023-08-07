@@ -60,6 +60,9 @@ $(document).ready(() => {
                 `;
             });
             $("#body_card").append(html);
+        },
+        error: (err) => {
+            $("#body_card").append(err);
         }
     });
 });
