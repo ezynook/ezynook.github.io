@@ -39,12 +39,6 @@ $(document).ready(() => {
         success: function (data){
             let html = "";
             $.each(data.data, (k,v) => {
-                // html += `
-                //     <tr>
-                //         <td>${v.name}</td>    
-                //         <td>${v.full_name}</td>     
-                //     </tr>
-                // `;
                 html += `
                     <div class="col">
                         <div class="card h-100 border-success">
