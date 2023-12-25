@@ -109,6 +109,78 @@ $(document).ready(function () {
         <a href="https://github.com/ezynook/Todo-App" target="_blank">ดูเพิ่มเติม</a>
         `);
     });
+    $("#superset").click(function(){
+        $("#myModal").modal("show");
+        $(".modal-title").text("Apache Superset");
+        $(".modal-body").html(`
+        <div align="center">
+            <img src="../images/superset.png" width="200">
+        </div>
+        <hr>
+        <h1>ดาวน์โหลดและการใช้งาน</h1>
+        <textarea class="form-control bg-dark text-warning" style="height: 150px" readonly>
+        cd /path/to/superset
+        git clone https://github.com/ezynook/superset.git
+        docker-compose up -d --build
+        </textarea>
+            <a href="https://github.com/ezynook/superset" target="_blank">ดูเพิ่มเติม</a>
+        `);
+    });
+    $("#phpipam").click(function(){
+        $("#myModal").modal("show");
+        $(".modal-title").text("Apache Superset");
+        $(".modal-body").html(`
+        <div align="center">
+            <img src="../images/phpipam.png" width="200">
+        </div>
+        <hr>
+        <h1>{PHPIPAM} IP Address Management System</h1>
+        <p>
+        PhpIPAM ใช้เพื่อจัดทำเอกสาร VLAN และโครงสร้างซับเน็ตของเครือข่ายของเรา เครื่องมือนี้สามารถจัดทำเอกสารผู้ให้บริการอินเทอร์เน็ตหรือ ISP ของเรา ข้อมูลวงจรโดยละเอียด และผู้ติดต่อทั้งหมด นอกจากนี้ยังช่วยให้เรามี Firewall Zones และ routings ที่มีเอกสารครบถ้วน ข้อมูลทั้งหมดใน phpIPAM สามารถค้นหาและเข้าถึงได้ง่าย แผนกไอทีของเราใช้ phpIPAM ซึ่งต้องใช้ชื่อผู้ใช้และรหัสผ่านในการเข้าถึงข้อมูล เนื่องจากเป็นแอปพลิเคชันบนเว็บ จึงไม่จำเป็นต้องติดตั้งไคลเอ็นต์เดสก์ท็อป เครื่องมือนี้เป็นแอปที่ยอดเยี่ยมที่สามารถจัดการงานของเราได้อย่างง่ายดาย
+        </p>
+        <h1>Download Project</h1>
+        <textarea class="form-control bg-dark text-warning" style="height: 150px" readonly>
+        $ cd ~
+        $ git clone https://github.com/ezynook/phpipam.git
+        $ cd phpipam
+        </textarea>
+        <h1>Deploy</h1>
+        <textarea class="form-control bg-dark text-warning" style="height: 50px" readonly>
+            $ docker-compose up -d --build
+        </textarea>
+        <h1>Database Setup</h1>
+        <ul>
+            <li>Username: root</li>
+            <li>Password: root</li>
+        </ul>
+        <h1>Install Extension</h1>
+        <textarea class="form-control bg-dark text-warning" style="height: 150px" readonly>
+            docker exec -it phpipam \\
+            /bin/bash -c "docker-php-ext-install <extension_name>"
+        </textarea>
+        <h1>กำหนด Schedule เพื่อให้มีการ Update alive host อัตโนมัติ</h1>
+        <ul>
+            <li>Linux (crontab)</li>
+            <li>Windows (Task Schedule)</li>
+        </ul>
+        <textarea class="form-control bg-dark text-warning" style="height: 150px" readonly>
+            touch \\
+                ~/phpipam/updatecheck.sh \\
+                && chmod +x ~/phpipam/updatecheck.sh \\
+                && vim ~/phpipam/updatecheck.sh
+        </textarea>
+        <p>คัดลอง Script นี้ไปวาง</p>
+        <textarea class="form-control bg-dark text-warning" style="height: 150px" readonly>
+            #!/bin/bash
+            docker exec -i phpipam bash -c \\
+            "cd /var/www/html/phpipam-agent; /usr/local/bin/php index.php update"
+        </textarea>
+        <textarea class="form-control bg-dark text-warning" style="height: 50px" readonly>
+            crontab -e
+        </textarea>
+            <a href="https://github.com/ezynook/phpipam" target="_blank">ดูเพิ่มเติม</a>
+        `);
+    });
 
 
 });
