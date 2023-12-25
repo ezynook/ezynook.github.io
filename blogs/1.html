@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="../assets/bootstrap.min.css" />
+    <script src="../assets/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="assets/w3.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/animate.css">
+    <title>pasit.dev | Blogs</title>
+    <style>
+        body {
+            font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="w3-animate-top">
+    <div class="container mt-3">
+        <div align="center">
+            <h1>Pasit.dev | Blogs</h1>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+            <!-- Webmin  -->
+            <div class="col">
+                <div class="card h-100 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                    <img src="../images/webmin.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Webmin</h5>
+                        <p class="card-text">การใช้งาน Webmin บน Docker</p>
+                        <a href="#" class="btn btn-outline-primary" id="webmin">อ่านเพิ่มเติม</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Apache Cassandra -->
+            <div class="col">
+                <div class="card h-100 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                    <img src="../images/cassandra.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Apache Cassandra</h5>
+                        <p class="card-text">การติดตั้งและใช้งาน Apache Cassandra</p>
+                        <a href="#" class="btn btn-outline-primary" id="cassandra">อ่านเพิ่มเติม</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Todo App -->
+            <div class="col">
+                <div class="card h-100 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                    <img src="../images/todo.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Todo App</h5>
+                        <p class="card-text">แจกฟรี Todo App</p>
+                        <a href="#" class="btn btn-outline-primary" id="todo">อ่านเพิ่มเติม</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Todo App -->
+            <div class="col">
+                <div class="card h-100 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                    <img src="../images/superset.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Apache Superset</h5>
+                        <p class="card-text">แจกฟรี Apache Superset</p>
+                        <a href="https://github.com/ezynook/superset" class="btn btn-outline-primary" id="superset" target="_blank">อ่านเพิ่มเติม</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Detail  -->
+    <!-- Modal Webmin -->
+    <div class="modal" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../assets/jquery.js"></script>
+<script src="blogs.js"></script>
+
+</html>
