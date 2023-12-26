@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="../assets/bootstrap.min.css" />
     <script src="../assets/bootstrap.bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="assets/w3.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/animate.css">
+    <!-- <link rel="stylesheet" href="../assets/animate.css"> -->
+    <link rel="stylesheet" href="animate.css">
     <title>pasit.dev | Blogs</title>
     <style>
         body {
@@ -20,72 +20,143 @@
     </style>
 </head>
 
-<body class="w3-animate-top">
-    <div class="container mt-3">
+<body class="bg-dark">
+    <div class="container mt-3 mb-5 animation">
         <div align="center">
-            <h1>Pasit.dev | Blogs</h1>
+            <h1><span class="badge bg-light text-dark">Pasit.dev | Blogs</span></h1>
         </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
-            <!-- Webmin  -->
-            <div class="col">
-                <div class="card h-100 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
-                    <img src="../images/webmin.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Webmin</h5>
-                        <p class="card-text">การใช้งาน Webmin บน Docker</p>
-                        <a href="#" class="btn btn-outline-primary" id="webmin">อ่านเพิ่มเติม</a>
-                    </div>
+        <div class="card">
+            <div class="card-body">
+                <div align="center">
+                    <form action="" method="get">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="txtsearch" placeholder="Enter Blogs content">
+                                    <label for="txtsearch">Search Blogs</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </div>
-            <!-- Apache Cassandra -->
-            <div class="col">
-                <div class="card h-100 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
-                    <img src="../images/cassandra.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Apache Cassandra</h5>
-                        <p class="card-text">การติดตั้งและใช้งาน Apache Cassandra</p>
-                        <a href="#" class="btn btn-outline-primary" id="cassandra">อ่านเพิ่มเติม</a>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mt-3" id="myDiv" align="center">
+                    <!-- Webmin  -->
+                    <div class="col">
+                        <div class="card h-100 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                            <img src="../images/webmin.png" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Webmin</h5>
+                                <p class="card-text">การใช้งาน Webmin บน Docker</p>
+                                <a href="#" class="btn btn-outline-primary" id="webmin">อ่านเพิ่มเติม</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <!-- Todo App -->
-            <div class="col">
-                <div class="card h-100 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
-                    <img src="../images/todo.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Todo App</h5>
-                        <p class="card-text">แจกฟรี Todo App</p>
-                        <a href="#" class="btn btn-outline-primary" id="todo">อ่านเพิ่มเติม</a>
+                    <!-- Apache Cassandra -->
+                    <div class="col">
+                        <div class="card h-100 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                            <img src="../images/cassandra.png" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Apache Cassandra</h5>
+                                <p class="card-text">การติดตั้งและใช้งาน Apache Cassandra</p>
+                                <a href="#" class="btn btn-outline-primary" id="cassandra">อ่านเพิ่มเติม</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <!-- Todo App -->
-            <div class="col">
-                <div class="card h-100 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
-                    <img src="../images/superset.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Apache Superset</h5>
-                        <p class="card-text">แจกฟรี Apache Superset</p>
-                        <a href="#" class="btn btn-outline-primary" id="superset">อ่านเพิ่มเติม</a>
+                    <!-- Todo App -->
+                    <div class="col">
+                        <div class="card h-100 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                            <img src="../images/todo.png" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Todo App</h5>
+                                <p class="card-text">แจกฟรี Todo App</p>
+                                <a href="#" class="btn btn-outline-primary" id="todo">อ่านเพิ่มเติม</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <!-- PHPIPAM App -->
-            <div class="col">
-                <div class="card h-100 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
-                    <img src="../images/phpipam.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">phpIPAM</h5>
-                        <p class="card-text">แจกฟรี phpIPAM</p>
-                        <a href="#" class="btn btn-outline-primary" id="phpipam">อ่านเพิ่มเติม</a>
+                    <!-- Todo App -->
+                    <div class="col">
+                        <div class="card h-100 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                            <img src="../images/superset.png" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Apache Superset</h5>
+                                <p class="card-text">แจกฟรี Apache Superset</p>
+                                <a href="#" class="btn btn-outline-primary" id="superset">อ่านเพิ่มเติม</a>
+                            </div>
+                        </div>
                     </div>
+                    <!-- PHPIPAM App -->
+                    <div class="col">
+                        <div class="card h-100 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                            <img src="../images/phpipam.png" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">phpIPAM</h5>
+                                <p class="card-text">แจกฟรี phpIPAM</p>
+                                <a href="#" class="btn btn-outline-primary" id="phpipam">อ่านเพิ่มเติม</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Airflow -->
+                    <div class="col">
+                        <div class="card h-100 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                            <img src="../images/airflow.png" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Apache Airflow</h5>
+                                <p class="card-text">เครื่องมือในการทำ ETL | Apache Airflow</p>
+                                <a href="#" class="btn btn-outline-primary" id="airflow">อ่านเพิ่มเติม</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CKAN -->
+                    <div class="col">
+                        <div class="card h-100 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                            <img src="https://camo.githubusercontent.com/aa161d0fc53d36cf8f151be5fc3ee12274ed4b328d142a5d840799976c6c435b/68747470733a2f2f6f70656e646174612e6e657364632e676f2e74682f75706c6f6164732f61646d696e2f323032312d30372d31312d3035303635382e3732343036334c6f676f4f70656e2d442d3035726573697a652e706e67"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">CKAN Open-D</h5>
+                                <p class="card-text">เครื่องมือในการทำ Data Catalog</p>
+                                <a href="#" class="btn btn-outline-primary" id="ckan">อ่านเพิ่มเติม</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hadoop -->
+                    <div class="col">
+                        <div class="card h-100 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                            <img src="https://camo.githubusercontent.com/611bcdd12a714319c72830827e1106dd6303a4c07c786cdbacc651e9d95dec09/68747470733a2f2f6861646f6f702e6170616368652e6f72672f6861646f6f702d6c6f676f2e6a7067"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Hadoop (Big Data)</h5>
+                                <p class="card-text">Big Data Single Instance</p>
+                                <a href="#" class="btn btn-outline-primary" id="hadoop">อ่านเพิ่มเติม</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hadoop -->
+                    <div class="col">
+                        <div class="card h-100 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                            <img src="https://camo.githubusercontent.com/71e79cfd6b679d246f9c432811761bc96eeeaf8680c15db2a8aa842d67398f45/68747470733a2f2f6173736574732e7a61626269782e636f6d2f696d672f6c6f676f2f7a61626269785f6c6f676f5f353030783133312e706e67"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Zabbix</h5>
+                                <p class="card-text">Zabbix Open Source IT Infrastructure Monitoring</p>
+                                <a href="#" class="btn btn-outline-primary" id="zabbix">อ่านเพิ่มเติม</a>
+                            </div>
+                        </div>
+                    </div>
+        
                 </div>
             </div>
         </div>
+        <hr>
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled"><a class="page-link" href="#">Page 1</a></li>
+              <li class="page-item"><a class="page-link" href="2.html">Page 2</a></li>
+            </ul>
+          </nav>
     </div>
     <!-- Modal Detail  -->
     <!-- Modal Webmin -->
-    <div class="modal" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
@@ -100,7 +171,9 @@
         </div>
     </div>
 </body>
-<script src="../assets/jquery.js"></script>
-<script src="blogs.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+<script src="./script/1.js"></script>
 
 </html>
