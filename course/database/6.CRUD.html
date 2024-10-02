@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>6.CRUD.MD</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h4 id="crud-statement">CRUD Statement</h4>
+<hr>
+<p><strong>ในการทำงานกับฐานข้อมูล SQLite คุณสามารถใช้คำสั่ง SQL สำหรับการทำงาน CRUD (Create, Read, Update, Delete) ดังนี้:</strong></p>
+<p><strong>1. Create (การสร้างข้อมูล)</strong></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span>
+    my_table (
+        <span class="hljs-keyword">name</span>, age, email
+    ) <span class="hljs-keyword">VALUES</span> (
+        <span class="hljs-string">'John Doe'</span>, <span class="hljs-number">30</span>, <span class="hljs-string">'john@example.com'</span>
+    );
+</div></code></pre>
+<hr>
+<p><strong>2. Read (การอ่านข้อมูล)</strong></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> customers
+<span class="hljs-comment">--ดึงข้อมูลเฉพาะคอลัมน์:</span>
+<span class="hljs-keyword">SELECT</span> first_name, last_name, email <span class="hljs-keyword">FROM</span> my_table;
+</div></code></pre>
+<p><strong>WHERE</strong>
+การใช้คำสั่ง SELECT ร่วมกับ WHERE ใน SQL เป็นวิธีการกรองข้อมูลจากตารางตามเงื่อนไขต่าง ๆ มีหลายรูปแบบที่สามารถใช้ได้ ดังนี้:</p>
+<ol>
+<li>การใช้ตัวดำเนินการเท่ากับ (=)</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> customers <span class="hljs-keyword">WHERE</span> customer_id = <span class="hljs-number">1</span>;
+</div></code></pre>
+<ol start="2">
+<li>การใช้ตัวดำเนินการไม่เท่ากับ (!= หรือ &lt;&gt;)</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> customers <span class="hljs-keyword">WHERE</span> customer_id != <span class="hljs-number">1</span>;
+</div></code></pre>
+<ol start="3">
+<li>การใช้ตัวดำเนินการมากกว่า (&gt;) และน้อยกว่า (&lt;)</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> orders <span class="hljs-keyword">WHERE</span> amount &gt; <span class="hljs-number">100.00</span>;
+<span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> orders <span class="hljs-keyword">WHERE</span> amount &lt; <span class="hljs-number">100.00</span>;
+</div></code></pre>
+<ol start="4">
+<li>การใช้ตัวดำเนินการมากกว่าหรือเท่ากับ (&gt;=) และน้อยกว่าหรือเท่ากับ (&lt;=)</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> orders <span class="hljs-keyword">WHERE</span> amount &gt;= <span class="hljs-number">100.00</span>;
+<span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> orders <span class="hljs-keyword">WHERE</span> amount &lt;= <span class="hljs-number">100.00</span>;
+</div></code></pre>
+<ol start="5">
+<li>การใช้คำสั่ง BETWEEN</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> orders <span class="hljs-keyword">WHERE</span> amount <span class="hljs-keyword">BETWEEN</span> <span class="hljs-number">100.00</span> <span class="hljs-keyword">AND</span> <span class="hljs-number">200.00</span>;
+</div></code></pre>
+<ol start="6">
+<li>การใช้คำสั่ง IN</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> customers <span class="hljs-keyword">WHERE</span> customer_id <span class="hljs-keyword">IN</span> (<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>);
+</div></code></pre>
+<ol start="7">
+<li>การใช้คำสั่ง NOT IN</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> customers <span class="hljs-keyword">WHERE</span> customer_id <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">IN</span> (<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>);
+</div></code></pre>
+<ol start="8">
+<li>การใช้คำสั่ง LIKE (เลือกข้อมูลลูกค้าที่ชื่อขึ้นต้นด้วยตัวอักษร “J”)</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> customers <span class="hljs-keyword">WHERE</span> first_name <span class="hljs-keyword">LIKE</span> <span class="hljs-string">'J%'</span>;
+</div></code></pre>
+<ol start="9">
+<li>การใช้คำสั่ง NOT LIKE (เลือกข้อมูลลูกค้าที่ชื่อไม่ขึ้นต้นด้วยตัวอักษร “J”)</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> customers <span class="hljs-keyword">WHERE</span> first_name <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">LIKE</span> <span class="hljs-string">'J%'</span>;
+</div></code></pre>
+<ol start="10">
+<li>การใช้คำสั่ง IS NULL และ IS NOT NULL (เลือกข้อมูลคำสั่งซื้อที่ amount เป็น NULL)</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> orders <span class="hljs-keyword">WHERE</span> amount <span class="hljs-keyword">IS</span> <span class="hljs-literal">NULL</span>;
+<span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> orders <span class="hljs-keyword">WHERE</span> amount <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>;
+</div></code></pre>
+<ol start="11">
+<li>การใช้คำสั่ง EXISTS (เลือกข้อมูลลูกค้าที่มีคำสั่งซื้ออยู่ในตาราง orders)</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> customers <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">EXISTS</span> (<span class="hljs-keyword">SELECT</span> <span class="hljs-number">1</span> <span class="hljs-keyword">FROM</span> orders <span class="hljs-keyword">WHERE</span> customers.customer_id = orders.customer_id);
+</div></code></pre>
+<ol start="12">
+<li>การใช้คำสั่ง NOT EXISTS</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> customers <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> (<span class="hljs-keyword">SELECT</span> <span class="hljs-number">1</span> <span class="hljs-keyword">FROM</span> orders <span class="hljs-keyword">WHERE</span> customers.customer_id = orders.customer_id);
+</div></code></pre>
+<ol start="13">
+<li>การใช้คำสั่ง AND (เลือกข้อมูลคำสั่งซื้อที่มีจำนวน (amount) มากกว่า 100.00 และถูกสั่งซื้อในวันที่ 10 มกราคม 2024)</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> orders <span class="hljs-keyword">WHERE</span> amount &gt; <span class="hljs-number">100.00</span> <span class="hljs-keyword">AND</span> order_date = <span class="hljs-string">'2024-01-10'</span>;
+</div></code></pre>
+<ol start="14">
+<li>การใช้คำสั่ง OR (เลือกข้อมูลคำสั่งซื้อที่มีจำนวน (amount) มากกว่า 100.00 หรือถูกสั่งซื้อในวันที่ 10 มกราคม 2024)</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> orders <span class="hljs-keyword">WHERE</span> amount &gt; <span class="hljs-number">100.00</span> <span class="hljs-keyword">OR</span> order_date = <span class="hljs-string">'2024-01-10'</span>;
+</div></code></pre>
+<ol start="15">
+<li>การใช้คำสั่ง CASE ใน WHERE</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> orders <span class="hljs-keyword">WHERE</span> 
+<span class="hljs-keyword">CASE</span> 
+    <span class="hljs-keyword">WHEN</span> order_date &gt;= <span class="hljs-string">'2024-01-01'</span> <span class="hljs-keyword">THEN</span> amount &gt; <span class="hljs-number">100.00</span>
+    <span class="hljs-keyword">ELSE</span> amount &gt; <span class="hljs-number">200.00</span>
+<span class="hljs-keyword">END</span>;
+</div></code></pre>
+<hr>
+<p><strong>INNER JOIN</strong>
+INNER JOIN จะคืนค่าบรรทัดที่มีการจับคู่ข้อมูลในทั้งสองตารางเท่านั้น</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> c.customer_id, c.first_name, o.order_id, o.amount
+<span class="hljs-keyword">FROM</span> customers c
+<span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> orders o <span class="hljs-keyword">ON</span> c.customer_id = o.customer_id;
+</div></code></pre>
+<p>ผลลัพธ์: คืนค่าข้อมูลเฉพาะลูกค้าที่มีคำสั่งซื้อ (เฉพาะบรรทัดที่มีการจับคู่ในทั้งสองตาราง)</p>
+<hr>
+<p><strong>LEFT JOIN</strong>
+LEFT JOIN จะคืนค่าบรรทัดทั้งหมดจากตารางทางซ้าย (ตาราง customers) และค่าที่ตรงกันจากตารางทางขวา (ตาราง orders) ถ้าไม่มีการจับคู่จะคืนค่า NULL สำหรับคอลัมน์ของตารางขวา</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> c.customer_id, c.first_name, o.order_id, o.amount
+<span class="hljs-keyword">FROM</span> customers c
+<span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> orders o <span class="hljs-keyword">ON</span> c.customer_id = o.customer_id;
+</div></code></pre>
+<p>ผลลัพธ์: คืนค่าข้อมูลทั้งหมดของลูกค้า แม้ว่าจะไม่มีคำสั่งซื้อก็ตาม (NULL จะถูกคืนค่าในคอลัมน์ของตาราง orders ที่ไม่มีการจับคู่)</p>
+<hr>
+<p><strong>RIGHT JOIN</strong>
+RIGHT JOIN จะคืนค่าบรรทัดทั้งหมดจากตารางทางขวา (ตาราง orders) และค่าที่ตรงกันจากตารางทางซ้าย (ตาราง customers) ถ้าไม่มีการจับคู่จะคืนค่า NULL สำหรับคอลัมน์ของตารางซ้าย</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> c.customer_id, c.first_name, o.order_id, o.amount
+<span class="hljs-keyword">FROM</span> customers c
+<span class="hljs-keyword">RIGHT</span> <span class="hljs-keyword">JOIN</span> orders o <span class="hljs-keyword">ON</span> c.customer_id = o.customer_id;
+</div></code></pre>
+<p>ผลลัพธ์: คืนค่าข้อมูลทั้งหมดของคำสั่งซื้อ แม้ว่าจะไม่มีลูกค้าก็ตาม (NULL จะถูกคืนค่าในคอลัมน์ของตาราง customers ที่ไม่มีการจับคู่)</p>
+<hr>
+<p><strong>3. Update (การแก้ไขข้อมูล)</strong></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">UPDATE</span> my_table
+<span class="hljs-keyword">SET</span> age = <span class="hljs-number">31</span>
+<span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> = <span class="hljs-string">'John Doe'</span>;
+<span class="hljs-comment">---การอัปเดตหลายคอลัมน์พร้อมกัน:</span>
+<span class="hljs-keyword">UPDATE</span> my_table
+<span class="hljs-keyword">SET</span> age = <span class="hljs-number">32</span>, email = <span class="hljs-string">'john.new@example.com'</span>
+<span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> = <span class="hljs-string">'John Doe'</span>;
+</div></code></pre>
+<hr>
+<p><strong>4. Delete (การลบข้อมูล)</strong></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> my_table
+<span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> = <span class="hljs-string">'John Doe'</span>;
+<span class="hljs-comment">---การลบข้อมูลทั้งหมดในตาราง</span>
+<span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> my_table;
+</div></code></pre>
+<hr>
+<p><strong>5. DROP TABLE</strong></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">TABLE</span> table_name;
+</div></code></pre>
+
+</body>
+</html>
