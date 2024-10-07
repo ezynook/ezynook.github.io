@@ -1,517 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="assets/bootstrap.min.css" />
-    <script src="assets/bootstrap.bundle.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="assets/w3.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link rel="stylesheet" href="assets/animate.css">
-    <title>pasit.dev</title>
-    <style>
-        body {
-            font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-        }
-    </style>
+    <meta name="keywords" content="jigar sable, portfolio, jigar, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
+    <meta name="description" content="Welcome to Jigar's Portfolio. Full-Stack Web Developer and Android App Developer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link id='favicon' rel="shortcut icon" href="./assets/images/hero2.png" type="image/x-png">
+    <title>Pasit Yodsoi | ~</title>
 </head>
+<body oncontextmenu="return false">
 
-<body class="w3-animate-top">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mb-5" style="margin-top: 0">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="images/pasit_logo.png" width="120">
+<!-- pre loader -->
+<!-- <div class="loader-container">
+  <img draggable="false" src="./assets/images/preloader.gif" alt="">
+</div> -->
 
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#course" id="btncourse">
-                                <i class="fa-brands fa-leanpub"></i> Course
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#project" id="btnproject">
-                                <i class="fa-solid fa-code"></i> Software
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#repos" id="btnrepos">
-                                <i class="fa-brands fa-github"></i> Github Repositories
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact" id="btncontact">
-                                <i class="fa-solid fa-phone"></i> Contact us.
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+<!-- navbar starts -->
+<header>
+        <a href="/" class="logo"><i class="fab fa-node-js"></i> pasitdev</a>
+
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#footer">Contact</a></li>
+            </ul>
         </nav>
-    </div>
-    <div class="container" style="margin-top: 80px; margin-bottom: 20px;" id="myDiv">
-        <section id="course">
-            <div class="card">
-                <div class="card-header bg-light">Course</div>
-                <div class="card-body">
-                    <!-- Content  -->
-                    <div class="card-group">
-                        <!-- Course  -->
-                        <div class="card">
-                            <div class="card-header">
-                                <div align="center">
-                                    <img src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png"
-                                        width="100">
-                                </div><br>
-                                <h5>เรียน Docker Step by Step ครบจบในคอร์สเดียว</h5>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Docker คือ Software Container แบบใหม่ที่ใช้งานได้ง่ายกว่า
-                                    เมื่อเทียบกับ Container ตัวอื่นๆทำให้ได้รับความนิยมในวงกว้าง
-                                    และกำลังเข้ามามีบทบาทในกลุ่ม Developer และ DevOps หรือ System Admin มากขึ้นเรื่อยๆ
-                                </p>
-                            </div>
-                            <div class="card-footer" align="center">
-                                <p class="card-text"><a href="https://line.me/ti/p/yU8rC5sz-w" target="_blank"
-                                        class="btn btn-success">สนใจเรียน</a></p>
-                            </div>
-                        </div>
-                        <!-- FastAPI -->
-                        <div class="card">
-                            <div class="card-header">
-                                <div align="center">
-                                    <img src="https://repository-images.githubusercontent.com/260928305/92388600-8d1c-11ea-9993-a726466b5099"
-                                        width="120"><br>
-                                    <h5>สร้าง API ด้วยภาษา FastAPI</h5>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Web Framework ที่พัฒนาด้วย Python เหมือนกันที่ชื่อว่า FastAPI
-                                    ซึ่งเป็นอีกหนึ่งตัวที่น่าสนใจในการนำมาสร้าง API
-                                    โดยตัวนี้ออกแบบมาให้ง่ายต่อการพัฒนาเป็นอย่างมากเราสามารถที่จะสร้าง API
-                                    ขึ้นมาได้อย่างรวดเร็ว
-                                    เข้าใจได้ง่ายและถ้าพูดถึงความเร็วในการใช้งานเชิงประสิทธิภาพนั้นเรียกได้ว่าเร็วเทียบเท่าตัว
-                                    NodeJS และ Go ได้เลย
-                                </p>
-                            </div>
-                            <div class="card-footer" align="center">
-                                <p class="card-text"><a href="https://line.me/ti/p/yU8rC5sz-w" target="_blank"
-                                        class="btn btn-success">สนใจเรียน</a></p>
-                            </div>
-                        </div>
-                        <!-- PHP -->
-                        <div class="card">
-                            <div align="center">
-                                <h5 class="card-header">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"
-                                        width="90"><br>
-                                    การเขียนโปรแกรมเพื่อพัฒนา web application ด้วยภาษา PHP
-                                </h5>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    เรียนรู้การพัฒนา Web Application ด้วยภาษา PHP ที่นิยมที่สุดในปัจจุบัน
-                                    มีโครงสร้างภาษาที่ง่ายสำหรับผู้เริ่มต้น แต่มีประสิทธิภาพสูงขั้นมืออาชีพ
-                                    อีกทั้งยังทำงานได้กับทุก Platform ไม่ว่าจะเป็น Windows, Linux หรือ Unix
-                                </p>
-                            </div>
-                            <div class="card-footer" align="center">
-                                <p class="card-text"><a href="https://line.me/ti/p/yU8rC5sz-w" target="_blank"
-                                        class="btn btn-success">สนใจเรียน</a></p>
-                            </div>
-                        </div>
-                        <!-- Linux -->
-                        <div class="card">
-                            <div align="center">
-                                <h5 class="card-header">
-                                    <img src="https://www.freepnglogos.com/uploads/linux-png/linux-logo-logo-brands-for-0.png"
-                                        width="70" class="mb-2"><br>
-                                    จัดการ Server ด้วย Linux (Linux Administrator)
-                                </h5>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Linux คือ ระบบปฏิบัติการ (Operating System) ประเภทหนึ่งเช่นเดียวกับ Windows หรือ
-                                    Unix เหมาะสำหรับการทำงานแบบ Server และ Network นิยมใช้เป็น Application Server ต่างๆ
-                                </p>
-                            </div>
-                            <div class="card-footer" align="center">
-                                <p class="card-text"><a href="https://line.me/ti/p/yU8rC5sz-w" target="_blank"
-                                        class="btn btn-success">สนใจเรียน</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-group">
-                        <div class="card">
-                            <h5 class="card-header">
-                                <div align="center">
-                                    <img src="https://datasolut.com/wp-content/uploads/2019/11/Hadoop_logo_new.png"
-                                        width="150" class="mb-2">
-                                </div>
-                                จัดการข้อมูลขนาดใหญ่ด้วย Apache Hadoop (Big Data)
-                            </h5>
-                            <div class="card-body">
-                                <p class="card-text">Hadoop เป็นซอฟต์แวร์ ตัวหนึ่งที่นิยมนำมาใช้ในการทำ Big Data
-                                    เนื่องจาก Hadoop นั้นเป็น Open Source สามารถที่จะพัฒนาต่อยอดได้ และมีเครื่องมือต่าง
-                                    ๆ ที่สามารถมาเชื่อมต่อกับ Hadoop เพื่อใช้งานได้ เช่น Pig, Hive, Hbase เป็นต้น โดยใช้
-                                    Hardware PC หรือ Server ทั่วไปมาสร้างเป็น Hadoop Cluster ได้</p>
-                            </div>
-                            <div class="card-footer" align="center">
-                                <p class="card-text"><a href="https://line.me/ti/p/yU8rC5sz-w" target="_blank"
-                                        class="btn btn-success">สนใจเรียน</a></p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title"></h5>
-                                <p class="card-text"></p>
-                                <p class="card-text"><small class="text-muted"></small></p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title"></h5>
-                                <p class="card-text"></p>
-                                <p class="card-text"><small class="text-muted"></small></p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title"></h5>
-                                <p class="card-text"></p>
-                                <p class="card-text"><small class="text-muted"></small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
-        <br>
-        <section id="project" style="margin-top: 0%;">
-            <div class="card">
-                <div class="card-header bg-light">Software</div>
-                <div class="card-body">
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                        <!-- ##### -->
-                        <div class="col">
-                            <div class="card border-success" style="max-width: 18rem;">
-                                <div class="card-header">CKAN Open-Data <span
-                                        class="badge bg-success">Open-Source</span></div>
-                                <div class="card-body">
-                                    <div align="center">
-                                        <img src="https://gdcatalog.go.th/assets/images/opend_ckan/logo_ckan_opend.jpg"
-                                            width="80" alt="">
-                                    </div>
-                                    <p class="card-text">ระบบ Open-Data เพื่อใช้ในการทำ Dictionary
-                                        ข้อมูลสำหรับองค์กรและภาครัฐ</p>
-                                </div>
-                                <div class="card-footer" align="center">
-                                    <a href="https://github.com/ezynook/open-data" class="btn btn-outline-success"
-                                        target="_blank">click here</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ###### -->
-                        <div class="col">
-                            <div class="card border-success" style="max-width: 18rem;">
-                                <div class="card-header">Hadoop for small business <span
-                                        class="badge bg-success">Open-Source</span></div>
-                                <div class="card-body">
-                                    <div align="center">
-                                        <img src="https://digi.data.go.th/wp-content/uploads/2023/04/664px-Hadoop_logo.svg-1.png"
-                                            width="150" alt="">
-                                    </div>
-                                    <p class="card-text">ระบบ Big Data ส่วนประกอบใน container มี Apache Hive, Hadoop
-                                        Version 2
-                                        สามารถใช้งานได้สำหรับทดสอบและใช้งานจริงในองค์กรขนาดเล็กถึงกลาง</p>
-                                </div>
-                                <div class="card-footer" align="center">
-                                    <a href="https://github.com/ezynook/docker-bigdata" class="btn btn-outline-success"
-                                        target="_blank">click here</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ###### -->
-                        <div class="col">
-                            <div class="card border-success" style="max-width: 18rem;">
-                                <div class="card-header">Password Genarator <span
-                                        class="badge bg-success">Open-Source</span></div>
-                                <div class="card-body">
-                                    <div align="center">
-                                        <img src="https://www.tinwhistlellc.com/password-generator/password-generator-app-icon.png"
-                                            width="50" alt="">
-                                    </div>
-                                    <p class="card-text">ระบบใช้ในการออกแบบรหัสผ่านที่มีความปลอดภัยโดยการนำเอา Mac
-                                        Address หรือ Unique String
-                                        มาเข้ารหัสเพื่อใช้กับอุปกรณ์ Network หรือ IT Device ต่างๆ</p>
-                                </div>
-                                <div class="card-footer" align="center">
-                                    <a href="https://github.com/ezynook/password-center-php"
-                                        class="btn btn-outline-success" target="_blank">click here</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ###### -->
-                        <div class="col">
-                            <div class="card border-success" style="max-width: 18rem;">
-                                <div class="card-header">Zabbix on Docker <span
-                                        class="badge bg-success">Open-Source</span></div>
-                                <div class="card-body">
-                                    <div align="center">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Zabbix_logo.svg"
-                                            width="100" alt="">
-                                    </div>
-                                    <p class="card-text">Zabbix open-source network-monitoring tool</p>
-                                </div>
-                                <div class="card-footer" align="center">
-                                    <a href="https://github.com/ezynook/zabbix" class="btn btn-outline-success"
-                                        target="_blank">click here</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ###### -->
-                        <div class="col">
-                            <div class="card border-success" style="max-width: 18rem;">
-                                <div class="card-header">Apache Airflow <span
-                                        class="badge bg-success">Open-Source</span></div>
-                                <div class="card-body">
-                                    <div align="center">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/AirflowLogo.png"
-                                            width="100" alt="">
-                                    </div>
-                                    <p class="card-text">Apache Airflow Data integration | ETL tools</p>
-                                </div>
-                                <div class="card-footer" align="center">
-                                    <a href="https://github.com/ezynook/apache-airflow" class="btn btn-outline-success"
-                                        target="_blank">click here</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ###### -->
-                        <div class="col">
-                            <div class="card border-primary" style="max-width: 18rem;">
-                                <div class="card-header">Big Data big-query tools <span
-                                        class="badge bg-primary">Non-Open Source</span></div>
-                                <div class="card-body">
-                                    <div align="center">
-                                        <img src="https://interpolados.files.wordpress.com/2018/10/google-cloud-sql.png?w=640"
-                                            width="50" alt="">
-                                    </div>
-                                    <p class="card-text">
-                                        ระบบใช้สำหรับ Query ข้อมูล โดยใช้ภาษา SQL Statement สำหรับฐานข้อมูลขนาดใหญ่ (Big
-                                        Data)
-                                        หากคุ้นเคยกับ
-                                        Hue หรือ Impala โดยตัวที่ผมพัฒนาขึ้นมานี่ใช้งานร่วมกับ TrinoDB
-                                        ซึ่งมีความเร็วเป็นอันดับต้นๆของโลก
-                                        โดยภาษาที่ใช้ในการพัฒนาหลักๆคือ Java, Python
-                                    </p>
-                                </div>
-                                <div class="card-footer" align="center">
-                                    <a href="https://line.me/ti/p/yU8rC5sz-w" class="btn btn-outline-primary"
-                                        target="_blank">ติดต่อผู้พัฒนา</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ###### -->
-                        <div class="col">
-                            <div class="card border-primary" style="max-width: 18rem;">
-                                <div class="card-header">Service Management System <span
-                                        class="badge bg-primary">Non-Open Source</span></div>
-                                <div class="card-body">
-                                    <div align="center">
-                                        <img src="https://gdm-catalog-fmapi-prod.imgix.net/ProductLogo/4a836eda-81e3-4eac-aa10-35158a379e59.png"
-                                            width="60" alt="">
-                                    </div>
-                                    <p class="card-text">
-                                        ระบบบริหารงานซ่อมสำหรับองค์กรหรือ Helpdesk
-                                    </p>
-                                </div>
-                                <div class="card-footer" align="center">
-                                    <a href="https://line.me/ti/p/yU8rC5sz-w" class="btn btn-outline-primary"
-                                        target="_blank">ติดต่อผู้พัฒนา</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ###### -->
-                        <div class="col">
-                            <div class="card border-primary" style="max-width: 18rem;">
-                                <div class="card-header">Restaurant Management System <span class="badge bg-primary">
-                                        Non-Open Source</span></div>
-                                <div class="card-body">
-                                    <div align="center">
-                                        <img src="https://static.wixstatic.com/media/51cfd3_26968476299a4d17a1f9bd2d64ec003b~mv2.png/v1/fill/w_1000,h_715,al_c,q_90,usm_0.66_1.00_0.01/51cfd3_26968476299a4d17a1f9bd2d64ec003b~mv2.png"
-                                            width="50" alt="">
-                                    </div>
-                                    <p class="card-text">
-                                        ระบบบริหารจัดการร้านอาหารครบวงจร
-                                    </p>
-                                </div>
-                                <div class="card-footer" align="center">
-                                    <a href="https://line.me/ti/p/yU8rC5sz-w" class="btn btn-outline-primary"
-                                        target="_blank">ติดต่อผู้พัฒนา</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ###### -->
-                        <div class="col">
-                            <div class="card border-primary" style="max-width: 18rem;">
-                                <div class="card-header">Stage Chord Searcher <span class="badge bg-primary">Non-Open
-                                        Source</span></div>
-                                <div class="card-body">
-                                    <div align="center">
-                                        <img src="https://static.vecteezy.com/system/resources/previews/009/384/601/original/headphones-clipart-design-illustartion-free-png.png"
-                                            width="60" alt="">
-                                    </div>
-                                    <p class="card-text">
-                                        ระบบสำหรับนักดนตรี เพื่อใช้ในการจัดการ Private Chord ทำเป็น Server Chord
-                                        เป็นของตัวเอง
-                                        สามารถสอบถามการใช้งานเพิ่มเติมได้จากผู้พัฒนา
-                                    </p>
-                                </div>
-                                <div class="card-footer" align="center">
-                                    <a href="https://line.me/ti/p/yU8rC5sz-w" class="btn btn-outline-primary"
-                                        target="_blank">ติดต่อผู้พัฒนา</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ###### -->
-                        <div class="col">
-                            <div class="card border-primary" style="max-width: 18rem;">
-                                <div class="card-header">iPOS Point of Sale <span class="badge bg-primary">Non-Open
-                                        Source</span></div>
-                                <div class="card-body">
-                                    <div align="center">
-                                        <img src="https://5.imimg.com/data5/XR/HK/XD/SELLER-2098150/retail-pos-system-software-software.png"
-                                            width="80" alt="">
-                                    </div>
-                                    <p class="card-text">
-                                        ระบบบริหารงานขายและจัดการสต๊อก [iPOS Stock Management System]
-                                    </p>
-                                </div>
-                                <div class="card-footer" align="center">
-                                    <a href="https://line.me/ti/p/yU8rC5sz-w" class="btn btn-outline-primary"
-                                        target="_blank">ติดต่อผู้พัฒนา</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ###### -->
-                        <div class="col">
-                            <div class="card border-success" style="max-width: 18rem;">
-                                <div class="card-header">{php}IPAM <span class="badge bg-success">Open
-                                        Source</span></div>
-                                <div class="card-body">
-                                    <div align="center">
-                                        <img src="https://phpipam.net/css/images/phpipam_logo_small@2x.png"
-                                            width="100" alt="">
-                                    </div>
-                                    <p class="card-text">
-                                        phpIPAM เป็นแอปพลิเคชันการจัดการที่อยู่ IP แบบครบวงจรและใช้งานง่าย
-                                    </p>
-                                </div>
-                                <div class="card-footer" align="center">
-                                    <a href="https://github.com/ezynook/phpipam"
-                                        class="btn btn-outline-success" target="_blank">click here</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
-        <br>
-        <!-- Repositoire -->
-        <section id="repos">
-            <div class="card">
-                <div class="card-header bg-light">Repositories Free</div>
-                <div class="card-body">
-                    <div class="row row-cols-1 row-cols-md-3 g-4" id="body_card">
-                        <!-- Ajax fetch here -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <br>
-        <!-- Contact us -->
-        <section id="contact">
-            <div class="card">
-                <div class="card-header bg-light">ช่องทางการติดต่อ</div>
-                <div class="card-body">
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                        <div class="col">
-                            <div class="card border-secondary" style="max-width: 20rem;">
-                                <div class="card-header">Phone</div>
-                                <div class="card-body text-secondary">
-                                    <h5 class="card-title" align="center">
-                                        <i class="fa-solid fa-phone" style="font-size: 50px;"></i>
-                                    </h5>
-                                    <p class="card-text" align="center">092-767-2000</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card border-secondary" style="max-width: 20rem;">
-                                <div class="card-header">Line</div>
-                                <div class="card-body text-secondary">
-                                    <h5 class="card-title" align="center"><img
-                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/LINE_New_App_Icon_%282020-12%29.png/480px-LINE_New_App_Icon_%282020-12%29.png"
-                                            width="30"></h5>
-                                    <p class="card-text" align="center">0836590338</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card border-secondary" style="max-width: 20rem;">
-                                <div class="card-header">Github</div>
-                                <div class="card-body text-secondary">
-                                    <h5 class="card-title" align="center"><a href="https://github.com/ezynook/"
-                                            target="_blank">
-                                            <img src="images/github.png" width="60">
-                                        </a></h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card border-secondary" style="max-width: 20rem;">
-                                <div class="card-header">LineID QR-Code</div>
-                                <div class="card-body text-secondary" align="center">
-                                    <a href="images/line.jpg" target="_blank">
-                                        <img src="images/line.jpg" width="60">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card border-secondary" style="max-width: 20rem;">
-                                <div class="card-header">Facebook</div>
-                                <div class="card-body text-secondary" align="center">
-                                    <a href="https://www.facebook.com/pasit.yodsoi">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png"
-                                            width="60">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+</header>
+<!-- navbar ends -->
 
+
+<!-- hero section starts -->
+<section class="home" id="home">
+    <div id="particles-js"></div>
+
+    <div class="content">
+    <h2>Hi There,<br/> I'm Pasit <span>Yodsoi</span></h2>
+    <p>i am into <span class="typing-text"></span></p>
+    <a href="#about" class="btn"><span>About Me</span>
+      <i class="fas fa-arrow-circle-down"></i>
+    </a>
+    <div class="socials">
+        <ul class="social-icons">
+          <li><a class="github" aria-label="GitHub" href="https://github.com/ezynook" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a class="line" aria-label="line" href="https://line.me/ti/p/TdZNziIcKK" target="_blank"><i class="fab fa-line"></i></a></li>
+          <li><a class="facebook" aria-label="facebook" href="https://www.facebook.com/pasit.yodsoi/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+        </ul>
+      </div>
+    </div>
+<div class="image">
+    <img draggable="false" class="tilt" src="./assets/images/hero2.png" alt="">
+</div>
+</section>
+<!-- hero section ends -->
+
+
+<!-- about section starts -->
+<section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+    
+    <div class="row">
+
+    <div class="image">
+        <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="">
+    </div>
+    <div class="content">
+        <h3>I'm Pasit</h3>
+        <span class="tag">Data Engineer</span>
+        
+        <p>I have a strong background in Information Technology and am highly passionate about data management and engineering solutions.
+            I specialize in building data pipelines, optimizing database performance, and transforming raw data into actionable insights.
+            I have experience working with tools such as SQL, Python, Apache Spark, and various cloud platforms to create scalable data solutions.
+            Continuously working to enhance my skills in data architecture and analytics.
+            I enjoy working with big data technologies to solve complex data problems. </p>
+        
+        <div class="box-container">
+            <div class="box">
+              <p><span> email : </span> ezynook@gmail.com</p>
+              <p><span> place : </span> Bangkok, Thailand</p>
             </div>
+        </div>
     </div>
-    </section>
     </div>
+</section>
+<!-- about section ends -->
+
+<!-- skills section starts -->
+<section class="skills" id="skills">
+
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
+
+    <div class="container">
+          <div class="row" id="skillsContainer">
+
+      </div>
+</div>
+</section>
+<!-- skills section ends -->
+
+
+<!-- education section starts -->
+<section class="education" id="education">
+
+  <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
+
+    <p class="qoute">Education is not merely the acquisition of facts, but rather the cultivation of the mind to think critically and independently.</p>
+
+    <div class="box-container">
+
+    <div class="box">
+        <div class="image">
+        <img draggable="false" src="./assets/images/collage.jpg" alt="">
+        </div>
+        <div class="content">
+        <h3>Chandrakasem Rajabhat University</h3>
+        <p>Computer Science</p>
+        <h4>2023</h4>
+        </div>
+    </div>
+    <div class="box">
+        <div class="image">
+        <img draggable="false" src="./assets/images/collage2.jpeg" alt="">
+        </div>
+        <div class="content">
+        <h3>Pattani Industrial and Community Education College</h3>
+        <p>Information Technology</p>
+        <h4>2015</h4>
+        </div>
+    </div>
+
+</div>
+</section>
+<!-- education section ends -->
+
+<!-- work project section ends -->
+
+<!-- experience section starts -->
+<section class="experience" id="experience">
+
+  <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
+
+  <div class="timeline">
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>Self Employed</h2>
+        </div>
+        <div class="desc">
+            <h3>Full Stack Developer</h3>
+            <p>Sep 2019 - present</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>Softnix Technology Co., Ltd</h2>
+        </div>
+        <div class="desc">
+            <h3>Data Engineer</h3>
+            <p>May 15, 2021 – Present</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>Digital Associates Co., Ltd</h2>
+        </div>
+        <div class="desc">
+            <h3>Network Engineer</h3>
+            <p>September 9, 2019 - May 31, 2021</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</section>
+<!-- experience section ends -->
+
+<!-- contact section starts -->
+<!-- <section class="contact" id="contact">
+  
+  <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+
+  <div class="container">
+    <div class="content">
+      <div class="image-box">
+        <img draggable="false" src="./assets/images/contact1.png" alt="">
+      </div>
+    <form id="contact-form">
+      
+      <div class="form-group">
+        <div class="field">
+          <input type="text" name="name" placeholder="Name" required>
+          <i class='fas fa-user'></i>
+        </div>
+        <div class="field">
+          <input type="text" name="email" placeholder="Email" required>
+          <i class='fas fa-envelope'></i>
+        </div>
+        <div class="field">
+          <input type="text" name="phone" placeholder="Phone">
+          <i class='fas fa-phone-alt'></i>
+        </div>
+        <div class="message">
+        <textarea placeholder="Message" name="message" required></textarea>
+        <i class="fas fa-comment-dots"></i>
+        </div>
+        </div>
+      <div class="button-area">
+        <button type="submit">
+          Submit <i class="fa fa-paper-plane"></i></button>
+      </div>
+    </form>
+  </div>
+  </div>
+</section> -->
+<!-- contact section ends -->
+
+
+<!-- footer section starts -->
+<section class="footer" id="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3>pasitdev Portfolio</h3>
+          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> </p>
+      </div>
+
+      <div class="box">
+          <h3>quick links</h3>
+          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+          <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
+          <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
+          <a href="#footer"><i class="fas fa-chevron-circle-right"></i> contact</a>
+      </div>
+
+      <div class="box">
+          <h3>contact info</h3>
+          <p> <i class="fas fa-phone"></i>+66 092-767-2000</p>
+          <p> <i class="fas fa-envelope"></i>ezynook@gmail.com</p>
+          <p> <i class="fas fa-map-marked-alt"></i>Bangkok, Thailand</p>
+          <div class="share">
+
+            <a class="github" aria-label="GitHub" href="https://github.com/ezynook" target="_blank"><i class="fab fa-github"></i></a>
+            <a class="line" aria-label="line" href="https://line.me/ti/p/TdZNziIcKK" target="_blank"><i class="fab fa-line"></i></a>
+            <a class="facebook" aria-label="facebook" href="https://www.facebook.com/pasit.yodsoi/" target="_blank"><i class="fab fa-facebook"></i></a>
+          </div>
+      </div>
+  </div>
+
+  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.facebook.com/pasit.yodsoi/"> Pasit Yodsoi</a></h1>
+
+</section>
+<!-- footer section ends -->
+
+
+<!-- scroll top btn -->
+<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+<!-- scroll back to top -->
+
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- typed.js cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- particle.js links -->
+<script src="./assets/js/particles.min.js"></script>
+<script src="./assets/js/app.js"></script>
+
+<!-- vanilla tilt.js links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- scroll reveal anim -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+
+<script src="./assets/js/script.js"></script>
+
 </body>
-<script src="assets/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
-<script src="script.js"></script>
-
 </html>

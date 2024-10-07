@@ -1,0 +1,78 @@
+[
+    {
+        "name": "Bootstrap",
+        "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
+    },
+    {
+        "name": "HTML5",
+        "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
+    },
+    {
+        "name": "CSS3",
+        "icon": "https://img.icons8.com/color/48/000000/css3.png"
+    },
+    {
+        "name": "JavaScript",
+        "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
+    },
+    {
+        "name": "PHP",
+        "icon": "https://img.icons8.com/offices/48/000000/php-logo.png"
+    },
+    {
+        "name": "Python",
+        "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
+    },
+    {
+        "name": "MySQL",
+        "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
+    },
+    {
+        "name": "PostgreSQL",
+        "icon": "https://img.icons8.com/color/48/000000/postgreesql.png"
+    },
+    {
+        "name": "jQuery",
+        "icon": "https://img.icons8.com/ios-filled/48/1169ae/jquery.png"
+    },
+    {
+        "name": "GitHub",
+        "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
+    },
+    {
+        "name": "Hadoop",
+        "icon": "https://static-00.iconduck.com/assets.00/hadoop-icon-2048x1535-hnz0inkl.png"
+    },
+    {
+        "name": "Apache Airflow",
+        "icon": "https://pbs.twimg.com/profile_images/1176455256869412866/Xu7llkL3_400x400.png"
+    },
+    {
+        "name": "FastAPI",
+        "icon": "https://miro.medium.com/v2/resize:fit:640/1*dpXAaEpwsJcs2UbZEp5jJw.png"
+    },
+    {
+        "name": "Flask",
+        "icon": "https://miro.medium.com/v2/resize:fit:438/1*dQvABiWzbE28OTPYjzElKw.png"
+    },
+    {
+        "name": "Pandas",
+        "icon": "https://numfocus.org/wp-content/uploads/2016/07/pandas-logo-300.png"
+    },
+    {
+        "name": "PySpark",
+        "icon": "https://miro.medium.com/v2/resize:fit:1200/1*M4hcYO2hPv3hzhkcuz8QuQ.jpeg"
+    },
+    {
+        "name": "Linux",
+        "icon": "https://pngimg.com/d/linux_PNG29.png"
+    },
+    {
+        "name": "Docker",
+        "icon": "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png"
+    },
+    {
+        "name": "Zabbix",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Zabbix_logo.png"
+    }      
+]
