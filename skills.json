@@ -66,5 +66,9 @@
     {
         "name": "Zabbix",
         "icon": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Zabbix_logo.png"
+    },
+    {
+        "name": "Shell Script",
+        "icon": "https://cdn.springpeople.com/media/Shell%20Script.png"
     }      
 ]

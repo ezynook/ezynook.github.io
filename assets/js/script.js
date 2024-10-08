@@ -64,14 +64,27 @@ $(document).ready(function () {
             confirmButtonText: "Submit",
             showLoaderOnConfirm: true,
             preConfirm: async (login) => {
-              console.log(login);
+              $.ajax({
+                type: "POST",
+                url: "http://iwtc.ddns.net/api/git.php",
+                data: {type: 'get-cv', 'line_id': login},
+                dataType: "JSON",
+                success: (response) => {
+                    if (response.message == 'success') {
+                        console.log("Success");
+                    }
+                }
+              });
               
             },
             allowOutsideClick: () => !Swal.isLoading()
           }).then((result) => {
             if (result.isConfirmed) {
-              console.log(result.value);
-              
+                Swal.fire({
+                    title: "Send Request",
+                    text: "request has been sent. Waiting for send of CV via Line as soon as possible.",
+                    icon: "success"
+                });
             }
           });
     });
