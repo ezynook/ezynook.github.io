@@ -53,6 +53,28 @@ $(document).ready(function () {
         event.preventDefault();
     });
     // <!-- emailjs to mail contact form data -->
+    $("#btn-cv").click(function(e) {
+        Swal.fire({
+            title: "Your Line ID",
+            input: "text",
+            inputAttributes: {
+              autocapitalize: "off"
+            },
+            showCancelButton: true,
+            confirmButtonText: "Submit",
+            showLoaderOnConfirm: true,
+            preConfirm: async (login) => {
+              console.log(login);
+              
+            },
+            allowOutsideClick: () => !Swal.isLoading()
+          }).then((result) => {
+            if (result.isConfirmed) {
+              console.log(result.value);
+              
+            }
+          });
+    });
 
 });
 
