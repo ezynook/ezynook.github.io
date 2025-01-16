@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link id='favicon' rel="shortcut icon" href="./assets/images/hero2.png" type="image/x-png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/bootstrap.min.css"/>
     <title>Pasit Yodsoi | ~</title>
 </head>
 
@@ -85,7 +87,7 @@
                         <p><span> place : </span> Bangkok, Thailand</p>
                     </div>
                 </div>
-                <button type="button" class="btn2 btn-primary btn-cv btn-lg" id="btn-cv">
+                <button type="button" class="btn2 btn-primary btn-cv" style="width: 120px; height: 50px; font-size: 18px;" id="btn-cv">
                     My CV <i class="fas fa-file"></i>
                 </button>
             </div>
@@ -225,7 +227,12 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./assets/js/script.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"></script>
+    <script type="text/javascript">        
+        alertify.defaults.theme.ok = "btn btn-primary";
+        alertify.defaults.theme.cancel = "btn btn-danger";
+        alertify.defaults.theme.input = "form-control";
+    </script>    
 </body>
 
 </html>

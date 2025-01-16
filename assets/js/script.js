@@ -54,39 +54,17 @@ $(document).ready(function () {
     });
     // <!-- emailjs to mail contact form data -->
     $("#btn-cv").click(function(e) {
-        Swal.fire({
-            title: "Your Line ID",
-            input: "text",
-            inputAttributes: {
-              autocapitalize: "off"
-            },
-            showCancelButton: true,
-            confirmButtonText: "Submit",
-            showLoaderOnConfirm: true,
-            preConfirm: async (login) => {
-              $.ajax({
-                type: "POST",
-                url: "http://iwtc.ddns.net/api/git.php",
-                data: {type: 'get-cv', 'line_id': login},
-                dataType: "JSON",
-                success: (response) => {
-                    if (response.message == 'success') {
-                        console.log("Success");
-                    }
-                }
-              });
-              
-            },
-            allowOutsideClick: () => !Swal.isLoading()
-          }).then((result) => {
-            if (result.isConfirmed) {
-                Swal.fire({
-                    title: "Send Request",
-                    text: "request has been sent. Waiting for send of CV via Line as soon as possible.",
-                    icon: "success"
-                });
-            }
-          });
+        var strHtml = `
+            <h2>กรุณา Add Line:</h2>
+            <br>
+            <div align="center">
+                <img src="./assets/images/lineid.png" width="150">
+            </div>
+        `;
+        alertify.alert(
+            " Requests CV",
+            strHtml
+        );
     });
 
 });
@@ -106,7 +84,7 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["Data Engineer", "Backend Developer", "Full stack Developer"],
+    strings: ["Data Engineer", "Full stack Developer"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
